@@ -1,0 +1,274 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #212529;
+  color: #c1c5c9;
+  font-size: 16px;
+}
+
+/* NAV START */
+#nav-bar {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  background: #7d4282;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#nav-bar > div {
+  height: 100%;
+}
+
+#nav-bar > div > i {
+  font-size: 1.5em;
+}
+
+#nav-bar > .div1 {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav-bar > div:nth-child(2) { /* class div2 ကိုညွှန်းထားပါတယ် */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-bar > div:last-child { /* class div3 ကိုညွှန်းထားပါတယ် */
+  width: 25%;
+  padding-right: 12.6px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* TAB START */
+#tab-bar {
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+  background: #5621cf;
+  border-top: 1px solid #999;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#tab-bar > div {
+  height: 90%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: .5;
+  transition: all .5s;
+}
+
+#tab-bar > div > i {
+  font-size: 1.2em;
+}
+
+#tab-bar > .active {
+  opacity: 1;
+}
+
+
+#tab-bar > #slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 20%;
+  background: #f7f7f7;
+  border-radius: 12px;
+  transition: all .5s;
+}
+  
+/* MAIN START */
+#main-container {
+  height: calc(100% - 100px);
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#main-container > div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #212529;
+  transition: all .5s;
+  transform: translateX(110%);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+/* HOME START */
+#main-container > #home-page {
+  transform: translateX(0);
+}
+
+#main-container > #home-page > div {
+  flex: none;
+}
+  
+#home-page .search-bar {
+  height: 40px;
+  width: 97%;
+  margin-top: 6px;
+  border-radius: 42px;
+  border: 1px solid #313539;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+#home-page .create-post-bar {
+  height: 45px;
+  width: 97%;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #313539;
+}
+
+#home-page .create-post-bar > i {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #313539;
+}
+
+#create-post-btn {
+  height: 40px;
+  width: 124px;
+  border-radius: 4px;
+  background: #5621cf;
+  border: none;
+  color: #c1c5c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+}
+
+#create-post-btn > i {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-page > .field {
+  height: 350px;
+  width: 400px;
+  border-radius: 20px;
+  margin-top: 22px;
+  border: 1px solid #313539;
+  background: #212529;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+              -2px -2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#home-page > .field > div {
+  width: 100%;
+  border-bottom: 1px solid #313539;
+}
+
+#home-page > .field > .info {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home-page > .field > .info > div {
+  height: 40px;
+}
+
+#home-page > .field > .info > .profile-box {
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #313539;
+  overflow: hidden;
+}
+
+#home-page > .field > .info > .profile-box > img {
+  height: 100%;
+  width: 100%;
+}
+
+#home-page > .field > .info > .name-box {
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+#home-page > .field > .info > .clock-box {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-page > .field > .content {
+  height: 200px;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+#home-page > .field > .content > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+  
+#home-page > .field > .des {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#home-page > .field > .more {
+  height: 50px;
+  border-bottom: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#home-page > .field > .more > i {
+  font-size: 1.4em;
+}
+  
