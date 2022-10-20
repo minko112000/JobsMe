@@ -140,6 +140,8 @@ body {
   justify-content: space-between;
   align-items: center;
   letter-spacing: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+              -2px -2px 3px rgba(0, 0, 0, 0.1);
 }
 
 #home-page .create-post-bar {
@@ -191,7 +193,7 @@ body {
 
 #home-page > .field {
   height: 350px;
-  width: 400px;
+  width: 97%;
   border-radius: 20px;
   margin-top: 22px;
   border: 1px solid #313539;
@@ -230,15 +232,16 @@ body {
 }
 
 #home-page > .field > .info > .name-box {
-  width: 250px;
+  width: calc(80% - 40px);
   display: flex;
   align-items: center;
+  margin-left: 6.4px;
 }
 
 #home-page > .field > .info > .clock-box {
-  width: 90px;
+  width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -271,4 +274,100 @@ body {
 #home-page > .field > .more > i {
   font-size: 1.4em;
 }
-  
+
+
+/* MESSAGE START */
+#message-page .search-bar {
+  flex: none;
+  height: 40px;
+  width: 97%;
+  margin-top: 6px;
+  border-radius: 42px;
+  border: 1px solid #313539;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+              -2px -2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#message-page > .shortcut-bar {
+  flex: none;
+  height: 50px;
+  width: 97%;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#message-page > .shortcut-bar > div {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+#message-page > .shortcut-bar > div > i {
+  font-size: 1.3em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #5621cf;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+              -2px -2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#message-page > .chat-container {
+  height: calc(100% - 130px);
+  width: calc(97% + 5px);
+  margin-top: 22px;
+}
+
+.active-page {
+  border-top: 1px solid #313539;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  padding: 5px;
+}
+
+
+.active-page > a {
+  height: 55px;
+  width: 100%;
+  flex: none;
+  border-radius: 3px;
+  background: #212529;
+  border-bottom: 1px solid #313539;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+.active-page > a > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.active-page > a > .name-vs-message {
+  height: 50px;
+  width: calc(80% - 45px);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 6.4px;
+}
+
+.active-page > a > .status-box {
+  height: 50px;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+}
