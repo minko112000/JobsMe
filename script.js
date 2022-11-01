@@ -2,9 +2,13 @@ const homeIcon = document.querySelector('#home-icon')
 const messageIcon = document.querySelector('#message-icon')
 const videosIcon = document.querySelector('#videos-icon')
 const notificationIcon = document.querySelector('#notification-icon')
-
+const createStoryIcon = document.querySelector('#create-story-icon')
+const morePage = document.querySelector('#more-page')
+const moreIcon = document.querySelector('.more-icon')
+const d1 = document.querySelector('.d1')
+const d2 = document.querySelector('.d2')
+const d3 = document.querySelector('.d3')
 const slider = document.querySelector('#slider')
-
 const homePage = document.querySelector('#home-page')
 const messagePage = document.querySelector('#message-page')
 const videosPage = document.querySelector('#videos-page')
@@ -62,6 +66,12 @@ const notificationPageShow = () => {
   videosPage.style.transform = 'translateX(100%)'
   notificationPage.style.transform = 'translateX(0%)'
 }
+const morePageShow = () => {
+  morePage.style.transform = 'translateX(0)'
+}
+const morePageHide = () => {
+  morePage.style.transform = 'translateX(-100%)'
+}
 
 window.addEventListener('load', () => {
   homePageShow()
@@ -81,4 +91,26 @@ videosIcon.addEventListener('click', () => {
 
 notificationIcon.addEventListener('click', () => {
   notificationPageShow()
+})
+
+
+let isMenuIconClick = false
+moreIcon.addEventListener('click', () => {
+  if (isMenuIconClick == false) {
+    morePageShow()
+    d2.style.opacity = 0
+    d1.style.background = '#5621cf'
+    d1.style.transform = 'rotate(45deg) translate(4px, 7.4px'
+    d3.style.background = '#5621cf'
+    d3.style.transform = 'rotate(-45deg) translate(4px, -7.4px)'
+    isMenuIconClick = true
+  } else {
+    morePageHide()
+    d2.style.opacity = 1
+    d1.style.background = 'none'
+    d1.style.transform = 'rotate(0deg) translate(0px, 0px)'
+    d3.style.background = 'none'
+    d3.style.transform = 'rotate(0deg) translate(0px, 0px)'
+    isMenuIconClick = false
+  }
 })
